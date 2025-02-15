@@ -1,0 +1,29 @@
+\documentclass{article}
+\usepackage{amsmath}
+
+\begin{document}
+
+\title{Problem 15}
+\maketitle
+
+This problem was not particularly difficult, but it still took me some time to solve because I'm not very good with combinatorics. I recalled some concepts from high school, but none of them immediately helped me see the solution.
+
+The main challenge for me was realizing that the order of the steps did not matter. Initially, I attempted to calculate $ 40! $, thinking that there were 20 moves in the "x direction" and 20 moves in the "y direction." However, it didn't work because each step in a given direction is a step in a given direction, that is, they're the same. In other words, swapping two identical moves does not create a new unique path.
+
+At this point, I recalled the combination formula:
+
+$$
+\binom{n}{r} = \frac{n!}{r!(n-r)!}
+$$
+
+This formula counts the number of ways to choose \( r \) elements from a set of \( n \) elements, without considering order. However, I needed a version of this formula that would account for a set consisting of two distinct groups of elements. This led me to the more general form:
+
+$$
+\binom{n+m}{n} = \frac{(n+m)!}{n! \, m!}
+$$
+
+This equation represents the number of ways to arrange \( n \) steps in one direction and \( m \) steps in another, considering that the order of moves within each direction does not matter.
+
+I'll admit that I had to look up this specific formula because I wouldn’t have recalled it on my own. Nevertheless, I really enjoyed working through this problem and gaining a deeper understanding of how combinatorial principles apply to it!
+
+\end{document}
